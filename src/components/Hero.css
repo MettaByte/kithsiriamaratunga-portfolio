@@ -208,8 +208,8 @@
 .portrait-wrapper {
   position: relative;
   width: 100%;
-  max-width: 460px;
-  aspect-ratio: 0.76 / 1;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
 }
 
 .portrait-offset-card {
@@ -232,6 +232,7 @@
   box-shadow: var(--shadow-lg);
   position: relative;
   z-index: 2;
+  filter: brightness(1.03) contrast(1.02) saturate(1.03);
 }
 
 .portrait-badge {
