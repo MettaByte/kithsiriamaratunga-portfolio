@@ -24,18 +24,7 @@ const Hero = () => {
           Former Senior Lecturer, General Sir John Kotelawala Defence University
         </p>
 
-        {/* Dual Primary CTA Buttons */}
-        <div className="hero-actions">
-          <a href="mailto:kithshya@gmail.com" className="btn-primary-centered">
-            <span>Contact Me</span>
-            <ArrowRight size={18} />
-          </a>
-          <a href="#services" className="btn-secondary-centered">
-            <span>Explore Services</span>
-          </a>
-        </div>
-
-        {/* Cleaner Social & Info Links Row */}
+        {/* Cleaner Social & Info Links Row (Above CTAs) */}
         <div className="hero-social-links">
           <a href="https://www.linkedin.com/in/kithsiri-amaratunga-694525202/" target="_blank" rel="noopener noreferrer" className="social-link-item">
             <FaLinkedin size={18} />
@@ -49,6 +38,17 @@ const Hero = () => {
             <MapPin size={18} />
             <span>Urapola, Sri Lanka</span>
           </div>
+        </div>
+
+        {/* Dual Primary CTA Buttons (At Bottom) */}
+        <div className="hero-actions">
+          <a href="mailto:kithshya@gmail.com" className="btn-primary-centered">
+            <span>Contact Me</span>
+            <ArrowRight size={18} />
+          </a>
+          <a href="#services" className="btn-secondary-centered">
+            <span>Explore Services</span>
+          </a>
         </div>
       </div>
     </section>
