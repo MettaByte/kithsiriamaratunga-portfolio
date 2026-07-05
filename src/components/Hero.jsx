@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import './Hero.css';
-import heroImg from '../assets/hero.png';
+import heroImg from '../assets/hero.webp';
 
 const Hero = () => {
   return (
