@@ -1,0 +1,125 @@
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resume-block {
+  margin-bottom: 2rem;
+}
+
+.resume-block-title {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(37, 99, 235, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.timeline {
+  position: relative;
+  border-left: 2px solid rgba(37, 99, 235, 0.2);
+  margin-left: 1rem;
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.4rem;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--accent-primary);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+}
+
+.timeline-date {
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.timeline-title {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.timeline-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Lists */
+.qualification-list,
+.publication-list {
+  list-style: none;
+}
+
+.qualification-list li,
+.publication-list li {
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 3px solid var(--accent-secondary);
+}
+
+.publication-list li {
+  border-left-color: var(--accent-primary);
+}
+
+.pub-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.pub-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.cert-icon {
+  color: var(--accent-primary);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
