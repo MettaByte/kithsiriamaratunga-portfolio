@@ -1,16 +1,179 @@
-.profile-text {
-  font-size: 1.125rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
+/* Unified Executive Highlights Bar */
+.profile-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 2.25rem 1.5rem;
 }
 
-.profile-text p {
-  margin-bottom: 1.5rem;
+@media (min-width: 768px) {
+  .profile-stats-bar {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2.25rem 1rem;
+    gap: 1rem;
+  }
 }
 
-.highlight-text {
+@media (max-width: 480px) {
+  .profile-stats-bar {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background-color: rgba(15, 23, 42, 0.08);
+  }
+}
+
+.stat-number {
+  font-size: 2.25rem;
+  font-weight: 800;
   color: var(--accent-primary);
-  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 0.5rem;
+}
+
+/* Pillars Grid Section */
+.profile-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .profile-pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar-card {
+  padding: 2.75rem 2.25rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slide Indicator Border on Hover */
+.pillar-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--accent-primary);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+.pillar-card:hover::after {
+  opacity: 1;
+}
+
+
+
+.pillar-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.pillar-desc {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.pillar-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  z-index: 1;
+}
+
+.pillar-badge {
+  font-size: 0.725rem;
+  font-weight: 500;
+  background-color: rgba(37, 99, 235, 0.03);
+  border: 1px solid rgba(37, 99, 235, 0.07);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.pillar-card:hover .pillar-badge {
+  background-color: rgba(37, 99, 235, 0.07);
+  border-color: rgba(37, 99, 235, 0.15);
+  color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .pillar-card {
+    padding: 2rem 1.5rem;
+  }
 }

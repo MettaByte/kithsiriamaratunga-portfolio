@@ -16,6 +16,7 @@ const Hero = () => {
           <img src={heroImg} alt="Kithsiri Amaratunga" className="hero-image" />
         </div>
         
+        <span className="hero-experience-badge">30+ Years of Academic & Translation Experience</span>
         <h1 className="hero-title">Kithsiri Amaratunga</h1>
         
         <p className="hero-subtitle">

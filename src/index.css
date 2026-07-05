@@ -129,3 +129,20 @@ button {
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-4 { margin-bottom: 1rem; }
 .mb-8 { margin-bottom: 2rem; }
+
+/* Global Responsive Optimizations */
+@media (max-width: 768px) {
+  .section {
+    padding: 4.5rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
